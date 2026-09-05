@@ -5,49 +5,49 @@ const categories = [
   {
     name: 'Logo & Branding',
     count: '2,400+ creatives',
-    src: 'https://images.pexels.com/photos/26576975/pexels-photo-26576975.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/7661184/pexels-photo-7661184.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     span: 'sm:col-span-2 sm:row-span-2',
   },
   {
     name: 'Graphics & Posters',
     count: '1,800+ creatives',
-    src: 'https://images.pexels.com/photos/3964758/pexels-photo-3964758.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/29501720/pexels-photo-29501720.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     span: '',
   },
   {
     name: 'UI/UX Design',
     count: '3,100+ creatives',
-    src: 'https://images.pexels.com/photos/326512/pexels-photo-326512.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     span: '',
   },
   {
     name: 'Social Media',
     count: '1,500+ creatives',
-    src: 'https://images.pexels.com/photos/15555796/pexels-photo-15555796.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/7661410/pexels-photo-7661410.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     span: '',
   },
   {
     name: 'Illustration',
     count: '960+ creatives',
-    src: 'https://images.pexels.com/photos/1707581/pexels-photo-1707581.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/27594599/pexels-photo-27594599.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     span: '',
   },
   {
     name: 'Video & Animation',
     count: '1,200+ creatives',
-    src: 'https://images.pexels.com/photos/6253568/pexels-photo-6253568.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/29450016/pexels-photo-29450016.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     span: 'sm:col-span-2',
   },
   {
     name: 'Presentation Design',
     count: '740+ creatives',
-    src: 'https://images.pexels.com/photos/3183194/pexels-photo-3183194.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/4088095/pexels-photo-4088095.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     span: '',
   },
   {
     name: 'Motion Graphics',
     count: '880+ creatives',
-    src: 'https://images.pexels.com/photos/11894290/pexels-photo-11894290.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/29488853/pexels-photo-29488853.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     span: '',
   },
 ];
@@ -56,28 +56,28 @@ export default function Categories() {
   const { ref, visible } = useReveal();
 
   return (
-    <section id="categories" className="py-20 lg:py-32 bg-cream">
-      <div className="mx-auto max-w-8xl px-5 sm:px-8">
+    <section id="categories" className="py-24 lg:py-32 bg-cream">
+      <div className="mx-auto max-w-8xl px-6 sm:px-10 lg:px-12">
         <div
           ref={ref}
           className={`reveal ${visible ? 'is-visible' : ''} flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 lg:mb-16`}
         >
           <div className="max-w-2xl">
-            <span className="text-xs font-medium uppercase tracking-wide text-clay-600">Categories</span>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tightest text-ink-900 text-balance">
+            <span className="text-xs font-medium uppercase tracking-wide text-iris-600">Categories</span>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-[3.75rem] font-semibold tracking-tightest text-ink-900 text-balance leading-[1.08]">
               Find the creative expertise you need.
             </h2>
           </div>
           <a
             href="#explore"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-700 hover:text-clay-600 transition-colors group shrink-0"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-700 hover:text-iris-600 transition-colors group shrink-0"
           >
             Browse all categories
             <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 auto-rows-[180px] sm:auto-rows-[220px] gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 auto-rows-[170px] sm:auto-rows-[210px] gap-3 sm:gap-4">
           {categories.map((cat, i) => (
             <a
               key={cat.name}

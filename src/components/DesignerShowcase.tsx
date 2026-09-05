@@ -17,8 +17,8 @@ const designers = [
     specialty: 'UI/UX & Product Design',
     avatar: 'https://images.pexels.com/photos/7147841/pexels-photo-7147841.jpeg?auto=compress&cs=tinysrgb&h=300&w=300',
     work: [
+      'https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?auto=compress&cs=tinysrgb&h=400&w=400',
       'https://images.pexels.com/photos/326512/pexels-photo-326512.jpeg?auto=compress&cs=tinysrgb&h=400&w=400',
-      'https://images.pexels.com/photos/221185/pexels-photo-221185.jpeg?auto=compress&cs=tinysrgb&h=400&w=400',
     ],
     verified: true,
   },
@@ -27,8 +27,8 @@ const designers = [
     specialty: 'Motion & Video',
     avatar: 'https://images.pexels.com/photos/12903019/pexels-photo-12903019.jpeg?auto=compress&cs=tinysrgb&h=300&w=300',
     work: [
-      'https://images.pexels.com/photos/6253568/pexels-photo-6253568.jpeg?auto=compress&cs=tinysrgb&h=400&w=400',
-      'https://images.pexels.com/photos/1188751/pexels-photo-1188751.jpeg?auto=compress&cs=tinysrgb&h=400&w=400',
+      'https://images.pexels.com/photos/29450016/pexels-photo-29450016.jpeg?auto=compress&cs=tinysrgb&h=400&w=400',
+      'https://images.pexels.com/photos/29488853/pexels-photo-29488853.jpeg?auto=compress&cs=tinysrgb&h=400&w=400',
     ],
     verified: false,
   },
@@ -38,7 +38,7 @@ const designers = [
     avatar: 'https://images.pexels.com/photos/4621581/pexels-photo-4621581.jpeg?auto=compress&cs=tinysrgb&h=300&w=300',
     work: [
       'https://images.pexels.com/photos/29501720/pexels-photo-29501720.jpeg?auto=compress&cs=tinysrgb&h=400&w=400',
-      'https://images.pexels.com/photos/1707581/pexels-photo-1707581.jpeg?auto=compress&cs=tinysrgb&h=400&w=400',
+      'https://images.pexels.com/photos/3964576/pexels-photo-3964576.jpeg?auto=compress&cs=tinysrgb&h=400&w=400',
     ],
     verified: true,
   },
@@ -48,24 +48,24 @@ export default function DesignerShowcase() {
   const { ref, visible } = useReveal();
 
   return (
-    <section id="designers" className="py-20 lg:py-32 bg-clay-50">
-      <div className="mx-auto max-w-8xl px-5 sm:px-8">
+    <section id="designers" className="py-24 lg:py-32 bg-iris-50/40">
+      <div className="mx-auto max-w-8xl px-6 sm:px-10 lg:px-12">
         <div
           ref={ref}
           className={`reveal ${visible ? 'is-visible' : ''} flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 lg:mb-16`}
         >
           <div className="max-w-2xl">
-            <span className="text-xs font-medium uppercase tracking-wide text-clay-600">Designers</span>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tightest text-ink-900 text-balance">
+            <span className="text-xs font-medium uppercase tracking-wide text-iris-600">Designers</span>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-[3.75rem] font-semibold tracking-tightest text-ink-900 text-balance leading-[1.08]">
               Meet the people behind the work.
             </h2>
           </div>
           <a
             href="#"
-            className="inline-flex items-center gap-2 rounded-full bg-ink-900 text-cream text-sm font-medium px-5 py-3 hover:bg-clay-600 transition-all duration-300 group shrink-0"
+            className="inline-flex items-center gap-2 rounded-full bg-ink-900 text-cream text-sm font-medium px-5 py-3 hover:bg-iris-600 transition-all duration-300 group shrink-0"
           >
             Explore Designers
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+            <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
           </a>
         </div>
 
@@ -100,7 +100,7 @@ export default function DesignerShowcase() {
 
                 <div className="flex items-center gap-1.5">
                   <h3 className="font-display text-lg font-medium text-ink-900">{d.name}</h3>
-                  {d.verified && <BadgeCheck size={16} className="text-clay-500 shrink-0" />}
+                  {d.verified && <BadgeCheck size={16} className="text-iris-500 shrink-0" />}
                 </div>
                 <p className="text-sm text-ink-500 mt-0.5">{d.specialty}</p>
 

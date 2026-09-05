@@ -10,11 +10,18 @@ const suggestions = [
   'Video',
 ];
 
+// Design placeholders — replace with real values when available
+const stats = [
+  { n: '10K+', l: 'Creatives' },
+  { n: '80+', l: 'Disciplines' },
+  { n: '4.9', l: 'Average rating' },
+];
+
 const heroTiles = [
   {
     src: 'https://images.pexels.com/photos/7661184/pexels-photo-7661184.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     label: 'Brand Identity',
-    span: 'row-span-2',
+    span: 'row-span-2 col-span-2',
   },
   {
     src: 'https://images.pexels.com/photos/29501720/pexels-photo-29501720.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
@@ -22,22 +29,22 @@ const heroTiles = [
     span: '',
   },
   {
-    src: 'https://images.pexels.com/photos/326512/pexels-photo-326512.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    label: 'UI Design',
+    src: 'https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    label: 'Web Design',
     span: '',
   },
   {
-    src: 'https://images.pexels.com/photos/5146441/pexels-photo-5146441.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/27594599/pexels-photo-27594599.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     label: 'Illustration',
     span: 'row-span-2',
   },
   {
-    src: 'https://images.pexels.com/photos/1188751/pexels-photo-1188751.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    label: 'Motion Graphics',
+    src: 'https://images.pexels.com/photos/29450016/pexels-photo-29450016.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    label: 'Motion Design',
     span: '',
   },
   {
-    src: 'https://images.pexels.com/photos/4841363/pexels-photo-4841363.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/8015895/pexels-photo-8015895.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     label: 'Packaging',
     span: '',
   },
@@ -47,28 +54,28 @@ export default function Hero() {
   const [focused, setFocused] = useState(false);
 
   return (
-    <section className="relative pt-32 sm:pt-36 lg:pt-40 pb-16 lg:pb-24 overflow-hidden">
+    <section className="relative pt-32 sm:pt-36 lg:pt-44 pb-20 lg:pb-28 overflow-hidden">
       {/* Background accents */}
-      <div className="absolute top-24 -right-32 w-[500px] h-[500px] rounded-full bg-clay-100/60 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 -left-40 w-[420px] h-[420px] rounded-full bg-ink-100/50 blur-3xl pointer-events-none" />
+      <div className="absolute top-20 -right-32 w-[500px] h-[500px] rounded-full bg-iris-100/50 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 -left-40 w-[420px] h-[420px] rounded-full bg-ink-100/40 blur-3xl pointer-events-none" />
 
-      <div className="relative mx-auto max-w-8xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-8xl px-6 sm:px-10 lg:px-12">
         {/* Eyebrow */}
         <div className="flex items-center gap-2 mb-6 animate-fade-in">
-          <span className="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide uppercase text-clay-600 bg-clay-50 border border-clay-200 rounded-full px-3 py-1.5">
+          <span className="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide uppercase text-iris-700 bg-iris-50 border border-iris-200 rounded-full px-3.5 py-1.5">
             <Sparkles size={13} /> A creative marketplace
           </span>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left: copy + search */}
           <div className="lg:col-span-7 xl:col-span-6">
-            <h1 className="font-display text-[2.6rem] leading-[1.04] sm:text-6xl lg:text-7xl font-semibold tracking-tightest text-ink-900 text-balance animate-fade-up">
+            <h1 className="font-display text-[2.75rem] leading-[1.05] sm:text-5xl lg:text-[4.5rem] xl:text-7xl font-semibold tracking-tightest text-ink-900 text-balance animate-fade-up">
               Great ideas deserve
-              <span className="block italic text-clay-600 font-normal">great design.</span>
+              <span className="block italic text-iris-600 font-normal">great design.</span>
             </h1>
 
-            <p className="mt-6 text-lg sm:text-xl text-ink-500 max-w-xl leading-relaxed text-pretty animate-fade-up reveal-delay-1">
+            <p className="mt-7 text-lg sm:text-xl text-ink-500 max-w-xl leading-relaxed text-pretty animate-fade-up reveal-delay-1">
               Discover talented creatives, find the right expertise, and bring
               your next idea to life with Lynvia.
             </p>
@@ -77,10 +84,10 @@ export default function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-3 animate-fade-up reveal-delay-2">
               <a
                 href="#explore"
-                className="inline-flex items-center gap-2 rounded-full bg-ink-900 text-cream text-sm font-medium px-6 py-3.5 hover:bg-clay-600 transition-all duration-300 hover:shadow-lg hover:shadow-clay-600/25 active:scale-[0.98] group"
+                className="inline-flex items-center gap-2 rounded-full bg-ink-900 text-cream text-sm font-medium px-6 py-3.5 hover:bg-iris-600 transition-all duration-300 hover:shadow-lg hover:shadow-iris-600/25 active:scale-[0.98] group"
               >
                 Explore Designers
-                <ArrowRight size={17} className="transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight size={17} className="transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
                 href="#"
@@ -91,20 +98,20 @@ export default function Hero() {
             </div>
 
             {/* Search */}
-            <div className="mt-10 max-w-xl animate-fade-up reveal-delay-3">
-              <label className="text-xs font-medium uppercase tracking-wide text-ink-400 mb-2.5 block">
+            <div className="mt-12 max-w-xl animate-fade-up reveal-delay-3">
+              <label className="text-xs font-medium uppercase tracking-wide text-ink-400 mb-3 block">
                 What are you looking to create?
               </label>
               <div
                 className={`relative flex items-center rounded-2xl border bg-white transition-all duration-300 ${
                   focused
-                    ? 'border-clay-400 shadow-xl shadow-clay-600/10 ring-4 ring-clay-100/60'
+                    ? 'border-iris-400 shadow-xl shadow-iris-600/10 ring-4 ring-iris-100/50'
                     : 'border-ink-200 shadow-sm'
                 }`}
               >
                 <Search
                   size={20}
-                  className={`absolute left-4 transition-colors ${focused ? 'text-clay-500' : 'text-ink-400'}`}
+                  className={`absolute left-4 transition-colors ${focused ? 'text-iris-500' : 'text-ink-400'}`}
                 />
                 <input
                   type="text"
@@ -113,7 +120,7 @@ export default function Hero() {
                   onBlur={() => setFocused(false)}
                   className="w-full bg-transparent pl-12 pr-4 py-4 text-sm sm:text-base text-ink-900 placeholder:text-ink-400 focus:outline-none"
                 />
-                <button className="hidden sm:flex items-center justify-center mr-2.5 w-10 h-10 rounded-xl bg-ink-900 text-cream hover:bg-clay-600 transition-colors shrink-0">
+                <button className="hidden sm:flex items-center justify-center mr-2.5 w-10 h-10 rounded-xl bg-ink-900 text-cream hover:bg-iris-600 transition-colors shrink-0 active:scale-95">
                   <ArrowRight size={17} />
                 </button>
               </div>
@@ -134,14 +141,12 @@ export default function Hero() {
           </div>
 
           {/* Right: creative work mosaic */}
-          <div className="lg:col-span-5 xl:col-span-6 animate-scale-in reveal-delay-2">
-            <div className="grid grid-cols-2 gap-3 sm:gap-4 auto-rows-[120px] sm:auto-rows-[140px] lg:auto-rows-[130px]">
+          <div className="lg:col-span-5 xl:col-span-6 animate-scale-in reveal-delay-2 mt-2 lg:mt-0">
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 auto-rows-[110px] sm:auto-rows-[130px] lg:auto-rows-[120px]">
               {heroTiles.map((tile, i) => (
                 <div
                   key={i}
-                  className={`group relative overflow-hidden rounded-2xl bg-ink-100 ${tile.span} ${
-                    i === 0 ? 'col-span-2' : ''
-                  }`}
+                  className={`group relative overflow-hidden rounded-2xl bg-ink-100 ${tile.span}`}
                 >
                   <img
                     src={tile.src}
@@ -157,13 +162,9 @@ export default function Hero() {
               ))}
             </div>
 
-            {/* Stats strip */}
-            <div className="mt-6 grid grid-cols-3 gap-4">
-              {[
-                { n: '12K+', l: 'Creatives' },
-                { n: '80+', l: 'Disciplines' },
-                { n: '4.9', l: 'Avg. rating' },
-              ].map((s) => (
+            {/* Stats strip — design placeholders, replace with real values */}
+            <div className="mt-8 grid grid-cols-3 gap-4 border-t border-ink-200 pt-6">
+              {stats.map((s) => (
                 <div key={s.l} className="text-center sm:text-left">
                   <div className="font-display text-2xl sm:text-3xl font-semibold text-ink-900">{s.n}</div>
                   <div className="text-xs text-ink-400 mt-0.5">{s.l}</div>

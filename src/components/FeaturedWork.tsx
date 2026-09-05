@@ -17,28 +17,28 @@ const works = [
     cls: 'lg:col-span-4',
   },
   {
-    src: 'https://images.pexels.com/photos/221185/pexels-photo-221185.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     title: 'Pulse — Fitness App UI',
     type: 'UI/UX Design',
     author: 'Aria Chen',
     cls: 'lg:col-span-3',
   },
   {
-    src: 'https://images.pexels.com/photos/37461259/pexels-photo-37461259.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    title: 'Creature Studies',
+    src: 'https://images.pexels.com/photos/27594599/pexels-photo-27594599.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    title: 'Chromatic Studies',
     type: 'Illustration',
     author: 'DΛVΞ G.',
     cls: 'lg:col-span-3',
   },
   {
-    src: 'https://images.pexels.com/photos/18936418/pexels-photo-18936418.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/8015895/pexels-photo-8015895.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     title: 'Maison Verte — Packaging',
     type: 'Packaging',
     author: 'Atelier Lune',
     cls: 'lg:col-span-4',
   },
   {
-    src: 'https://images.pexels.com/photos/17115910/pexels-photo-17115910.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    src: 'https://images.pexels.com/photos/29450016/pexels-photo-29450016.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     title: 'Chroma — Title Sequence',
     type: 'Motion Graphics',
     author: 'K. Vidal',
@@ -57,16 +57,17 @@ export default function FeaturedWork() {
   const { ref, visible } = useReveal({ threshold: 0.05 });
 
   return (
-    <section id="explore" className="py-20 lg:py-32 bg-ink-950 text-cream relative overflow-hidden">
-      <div className="absolute top-1/3 -left-40 w-[400px] h-[400px] rounded-full bg-clay-600/10 blur-3xl pointer-events-none" />
-      <div className="relative mx-auto max-w-8xl px-5 sm:px-8">
+    <section id="explore" className="py-24 lg:py-32 bg-ink-950 text-cream relative overflow-hidden">
+      <div className="absolute top-1/3 -left-40 w-[400px] h-[400px] rounded-full bg-iris-600/12 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-iris-950/30 blur-3xl pointer-events-none" />
+      <div className="relative mx-auto max-w-8xl px-6 sm:px-10 lg:px-12">
         <div
           ref={ref}
           className={`reveal ${visible ? 'is-visible' : ''} flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 lg:mb-16`}
         >
           <div className="max-w-2xl">
-            <span className="text-xs font-medium uppercase tracking-wide text-clay-300">Featured Work</span>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tightest text-cream text-balance">
+            <span className="text-xs font-medium uppercase tracking-wide text-iris-300">Featured Work</span>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-[3.75rem] font-semibold tracking-tightest text-cream text-balance leading-[1.08]">
               Made by creative minds.
             </h2>
           </div>
@@ -91,9 +92,9 @@ export default function FeaturedWork() {
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500" />
               <div className="absolute inset-0 p-5 flex flex-col justify-end">
-                <span className="text-[11px] font-medium uppercase tracking-wide text-clay-300 mb-1.5">{w.type}</span>
+                <span className="text-[11px] font-medium uppercase tracking-wide text-iris-300 mb-1.5">{w.type}</span>
                 <h3 className="font-display text-lg sm:text-xl font-medium text-cream leading-tight">{w.title}</h3>
                 <div className="flex items-center justify-between mt-2">
                   <span className="text-xs text-cream/60">by {w.author}</span>

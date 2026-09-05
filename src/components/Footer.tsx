@@ -4,6 +4,10 @@ const groups = [
     links: ['Designers', 'Categories', 'How It Works', 'For Designers'],
   },
   {
+    title: 'Account',
+    links: ['Log In', 'Join Lynvia', 'Start a Project'],
+  },
+  {
     title: 'Company',
     links: ['About', 'Contact', 'Careers'],
   },
@@ -16,10 +20,10 @@ const groups = [
 export default function Footer() {
   return (
     <footer className="bg-ink-950 text-cream pt-20 pb-10">
-      <div className="mx-auto max-w-8xl px-5 sm:px-8">
+      <div className="mx-auto max-w-8xl px-6 sm:px-10 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-12 pb-16 border-b border-cream/10">
           {/* Brand */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4">
             <span className="font-display text-3xl font-semibold tracking-tightest text-cream">LYNVIA</span>
             <p className="mt-4 text-cream/50 max-w-sm leading-relaxed">
               A premium creative-services marketplace. Discover talented
@@ -27,14 +31,14 @@ export default function Footer() {
             </p>
             <a
               href="#"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-cream/10 hover:bg-clay-500 text-cream text-sm font-medium px-5 py-2.5 transition-all duration-300"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-cream/10 hover:bg-iris-600 text-cream text-sm font-medium px-5 py-2.5 transition-all duration-300"
             >
               Start a Project
             </a>
           </div>
 
           {/* Link groups */}
-          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
+          <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8">
             {groups.map((g) => (
               <div key={g.title}>
                 <h4 className="text-xs font-medium uppercase tracking-wide text-cream/40 mb-4">{g.title}</h4>
@@ -43,7 +47,7 @@ export default function Footer() {
                     <li key={l}>
                       <a
                         href="#"
-                        className="text-sm text-cream/70 hover:text-clay-300 transition-colors"
+                        className="text-sm text-cream/70 hover:text-iris-300 transition-colors"
                       >
                         {l}
                       </a>

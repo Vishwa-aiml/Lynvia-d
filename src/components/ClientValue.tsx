@@ -2,25 +2,25 @@ import { Search, MessagesSquare, FolderOpen, RefreshCw, ShieldCheck, CreditCard 
 import { useReveal } from '@/hooks/useReveal';
 
 const values = [
-  { icon: Search, title: 'Discover the right talent', desc: 'Browse creatives by discipline, style, and availability.' },
-  { icon: MessagesSquare, title: 'Direct communication', desc: 'Talk to your designer from the start — no middlemen.' },
-  { icon: FolderOpen, title: 'Organized deliveries', desc: 'Files, assets, and versions kept in one place.' },
-  { icon: RefreshCw, title: 'Revision workflow', desc: 'Iterate with structured feedback until it’s right.' },
-  { icon: CreditCard, title: 'Easy collaboration', desc: 'Manage your project from brief to final delivery.' },
-  { icon: ShieldCheck, title: 'Secure payments', desc: 'Pay with confidence through protected transactions.' },
+  { icon: Search, title: 'Discover the right creative talent', desc: 'Browse creative work and find the right specialist for your project.' },
+  { icon: MessagesSquare, title: 'Direct communication', desc: 'Talk to your designer from the start — keep every conversation in one place.' },
+  { icon: FolderOpen, title: 'Organized files & deliveries', desc: 'Project files, assets, and versions kept structured and easy to find.' },
+  { icon: RefreshCw, title: 'Revision workflow', desc: 'Request changes with structured feedback until the work is right.' },
+  { icon: ShieldCheck, title: 'Secure project experience', desc: 'Work through a structured project workflow with protected payments.' },
+  { icon: CreditCard, title: 'Collaborate with confidence', desc: 'Manage your project from brief to final delivery with clarity.' },
 ];
 
 export default function ClientValue() {
   const { ref, visible } = useReveal({ threshold: 0.08 });
 
   return (
-    <section className="py-20 lg:py-32 bg-cream">
-      <div className="mx-auto max-w-8xl px-5 sm:px-8">
+    <section className="py-24 lg:py-32 bg-cream">
+      <div className="mx-auto max-w-8xl px-6 sm:px-10 lg:px-12">
         <div ref={ref} className={`reveal ${visible ? 'is-visible' : ''} grid lg:grid-cols-12 gap-10 lg:gap-16 items-start`}>
           {/* Left editorial */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">
-            <span className="text-xs font-medium uppercase tracking-wide text-clay-600">For Clients</span>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tightest text-ink-900 text-balance">
+            <span className="text-xs font-medium uppercase tracking-wide text-iris-600">For Clients</span>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-[3.75rem] font-semibold tracking-tightest text-ink-900 text-balance leading-[1.08]">
               From idea to finished work, without the friction.
             </h2>
             <p className="mt-5 text-ink-500 leading-relaxed max-w-md">
@@ -30,8 +30,8 @@ export default function ClientValue() {
 
             <div className="mt-8 relative overflow-hidden rounded-3xl h-72 group">
               <img
-                src="https://images.pexels.com/photos/3688759/pexels-photo-3688759.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                alt="Creative collaboration"
+                src="https://images.pexels.com/photos/7661184/pexels-photo-7661184.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                alt="Creative project work"
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
               />
@@ -54,7 +54,7 @@ export default function ClientValue() {
                       visible ? 'is-visible' : ''
                     } reveal reveal-delay-${(i % 4) + 1}`}
                   >
-                    <div className="w-11 h-11 rounded-2xl bg-ink-900 text-cream flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:bg-clay-600">
+                    <div className="w-11 h-11 rounded-2xl bg-ink-900 text-cream flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:bg-iris-600">
                       <Icon size={19} />
                     </div>
                     <h3 className="font-display text-xl font-medium text-ink-900 mb-1.5">{v.title}</h3>
